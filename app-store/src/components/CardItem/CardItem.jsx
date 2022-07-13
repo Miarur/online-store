@@ -1,20 +1,21 @@
 import React from 'react';
 import cl from './CardItem.module.css';
 
-const CardItem = () => {
+const CardItem = (props) => {
+  console.log(props)
   return (
     <div className={cl.card}>
-      <h2 className={cl.card__title }>Iphone 13</h2>
+      <h2 className={cl.card__title }>{props.card.name}</h2>
       <div className={cl.card__image}>
-        <img className={cl.image__item} src="https://content2.onliner.by/catalog/device/header/b9fefc8c8f96dbc21492792f3a1a502d.jpeg" alt="iphone" />
+        <img className={cl.image__item} src={props.card.img} alt="iphone" />
       </div>
       <div className={cl.card__content}>
-        <p className={cl.content__item}>В наличии: 12</p>
-        <p className={cl.content__item}>2018</p>
-        <p className={cl.content__item}>Apple</p>
-        <p className={cl.content__item}>black</p>
-        <p className={cl.content__item}>Количество камер - 3</p>
-        <p className={cl.content__item}>Популярный</p>
+        <p className={cl.content__item}>В наличии: {props.card.quantity}</p>
+        <p className={cl.content__item}>{props.card.year}</p>
+        <p className={cl.content__item}>{props.card.producer}</p>
+        <p className={cl.content__item}>{props.card.color}</p>
+        <p className={cl.content__item}>Количество камер - {props.card.quantityCamers}</p>
+        <p className={cl.content__item}>Популярный - {props.card.popularity}</p>
       </div>
     </div>
   );
