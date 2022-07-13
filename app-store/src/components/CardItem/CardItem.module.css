@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Quicksand';
+  font-weight: 400;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 200px;
+  min-height: 400px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: flex-end;
+  -webkit-box-shadow: 5px 7px 47px -2px rgba(9, 108, 242, 0.29);
+  -moz-box-shadow: 5px 7px 47px -2px rgba(9, 108, 242, 0.29);
+  box-shadow: 5px 7px 47px -2px rgba(9, 108, 242, 0.29);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 700;
+
+}
+
+.card__image {
+  max-width: 200px;
+  min-height: 235px;
+}
+
+
+.card__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgb(2,0,36);
+  background: linear-gradient(243deg, rgba(2,0,36,1) 0%, rgba(0,220,255,0.12118350758272056) 0%);
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+}
+
+.content__item {
+  margin: 2px;
+  padding: 3px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 0.5px solid rgb(209, 207, 211);
+  background: rgb(2,0,36);
+  background: linear-gradient(243deg, rgba(2,0,36,1) 0%, rgba(172, 208, 213, 0.474) 0%);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.content__item:hover {
+  background: rgb(2,0,36);
+  background: linear-gradient(243deg, rgba(2,0,36,1) 0%, rgba(0,220,255,0.4741246840533089) 0%);
+  color: white;
+}
