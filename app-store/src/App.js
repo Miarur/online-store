@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './styles/App.css';
-import CardItem from './components/CardItem/CardItem';
+import CardList from './components/CardList/CardList';
 
 
 function App() {
@@ -32,9 +32,7 @@ function App() {
 
   return (
     <div className="App wrapper">
-      {cards.map((card) =>
-        <CardItem card={card} key={card.name}></CardItem>
-      )}
+      <CardList cards={cards}></CardList>
     </div>
   );
 }
