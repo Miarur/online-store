@@ -8,51 +8,56 @@
     "producer": "Apple", 
     "color": "black-night", 
     "quantityCamers": 3,
-    "popularity": "yes"
+    "popularity": "yes",
+    "price": 976
   },
 
   {
-    "name":"iPhone 11 64GB",
+    "name":"IPhone 11 64GB",
     "img": "https://content2.onliner.by/catalog/device/header/e2189f90f9088975c553ec33431fc186.jpeg", 
     "quantity": "10", 
     "year": "2019", 
     "producer": "Apple", 
     "color": "black", 
     "quantityCamers": 2,
-    "popularity": "yes"
+    "popularity": "yes",
+    "price": 649
   },
 
   {
-    "name":"iPhone 13 Pro 128GB",
+    "name":"IPhone 13 Pro 128GB",
     "img": "https://content2.onliner.by/catalog/device/header/c66db6b4c5cce1915eadd8bb59f5c527.jpeg", 
     "quantity": "10", 
     "year": "2021", 
     "producer": "Apple", 
     "color": "graphite", 
     "quantityCamers": 3,
-    "popularity": "yes"
+    "popularity": "yes",
+    "price": 1237
   },
 
   {
-    "name":"iPhone 12 128GB",
+    "name":"IPhone 12 128GB",
     "img": "https://content2.onliner.by/catalog/device/header/bf14a99b6b00fa25711a3e8e7a87d23a.jpeg", 
     "quantity": "9", 
     "year": "2020", 
     "producer": "Apple", 
     "color": "black", 
     "quantityCamers": 2,
-    "popularity": "no"
+    "popularity": "no",
+    "price": 937
   },
 
   {
-    "name":"Apple iPhone SE 64GB",
+    "name":"IPhone SE 64GB",
     "img": "https://content2.onliner.by/catalog/device/header/5967975d9c930761f16487f8b690eb9a.jpeg", 
     "quantity": "5", 
     "year": "2020", 
     "producer": "Apple", 
     "color": "black", 
     "quantityCamers": 1,
-    "popularity": "no"
+    "popularity": "no",
+    "price": 507
   },
 
 
@@ -64,7 +69,8 @@
     "producer": "Xiaomi", 
     "color": "gray onyx", 
     "quantityCamers": 2,
-    "popularity": "yes"
+    "popularity": "yes",
+    "price": 284
   },
 
 
@@ -76,7 +82,8 @@
     "producer": "Xiaomi", 
     "color": "black", 
     "quantityCamers": 3,
-    "popularity": "yes"
+    "popularity": "yes",
+    "price": 357
   },
 
   {
@@ -87,7 +94,8 @@
     "producer": "Xiaomi", 
     "color": "gray", 
     "quantityCamers": 2,
-    "popularity": "yes"
+    "popularity": "yes",
+    "price": 125
   }, 
 
   {
@@ -98,7 +106,8 @@
     "producer": "Xiaomi", 
     "color": "black", 
     "quantityCamers": 2,
-    "popularity": "no"
+    "popularity": "no",
+    "price": 199
   },
 
   {
@@ -109,10 +118,9 @@
     "producer": "Xiaomi", 
     "color": "white", 
     "quantityCamers": 2,
-    "popularity": "no"
+    "popularity": "no",
+    "price": 122
   }
-
-
 
 ]}
 
