@@ -75,3 +75,9 @@
   background: linear-gradient(243deg, rgba(2,0,36,1) 0%, rgba(0,220,255,0.4741246840533089) 0%);
   color: white;
 }
+
+._price {
+  background-color: rgba(255, 0, 0, 0.76);
+  font-size: 2.0rem;
+  color: rgb(5, 5, 5);
+}

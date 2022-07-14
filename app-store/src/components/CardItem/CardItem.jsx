@@ -16,6 +16,7 @@ const CardItem = (props) => {
         <p className={cl.content__item}>{props.card.color}</p>
         <p className={cl.content__item}>Количество камер - {props.card.quantityCamers}</p>
         <p className={cl.content__item}>Популярный - {props.card.popularity}</p>
+        <p className={[cl.content__item, cl._price].join(' ')}>{props.card.price + '$'}</p>
       </div>
     </div>
   );
