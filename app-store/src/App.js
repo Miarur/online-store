@@ -49,6 +49,7 @@ function App() {
   }, [searchQuery, getSortedCards])
 
 
+  console.log(cards.length);
   return (
     <div className="App wrapper">
       <div className="instrument">
@@ -72,7 +73,11 @@ function App() {
           placeholder="Поиск..."
          />
       </div>
-      <CardList cards={SortingWithSearch}></CardList>
+
+      {SortingWithSearch.length
+        ? <CardList cards={SortingWithSearch}></CardList>
+        : <h1 className="warning">Товары не найдены</h1>
+      }
     </div>
   );
 }
