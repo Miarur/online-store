@@ -1,10 +1,11 @@
 import React from "react";
-import "./SortSelect.module.css";
+// import "./SortSelect.module.css";
+import cl from "./SortSelect.module.css";
 
 const SortSelect = ({options, defaultValue, value, onChange}) => {
 
   return (
-    <div className="select">
+    <div className="select act">
       <select
         value={value}
         onChange={event => onChange(event.target.value)}

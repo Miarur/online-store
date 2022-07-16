@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import "./styles/App.css";
 import CardList from "./components/CardList/CardList";
 import axios from "axios";
 import data from "./API/data.json";
 import SortSelect from "./components/UI/select/SortSelect";
+import SearchField from "./components/UI/input/SearchField";
 
 function App() {
   const [cards, setCards] = useState(data.sku);
@@ -11,33 +12,49 @@ function App() {
   //состояние + двухсторонне связывание для сортировки
   const [selectedSort, setSelectedSort] = useState("");
 
-  //функция сортировки
-  const sortCards = (sort) => {
-    setSelectedSort(sort)
-    switch (sort) {
-      case "nameUp":
-        return setCards([...cards].sort((a, b) => a.name.localeCompare(b.name)));
-      case "nameDown":
-        return setCards([...cards].sort((a, b) => b.name.localeCompare(a.name)));
-      case "priceUp":
-        return setCards([...cards].sort((a, b) => a.price - b.price));
-      case "priceDown":
-        return setCards([...cards].sort((a, b) => b.price - a.price));
-      case "yearUp":
-        return setCards([...cards].sort((a, b) => a.year - b.year));
-      case "yearDown":
-        return setCards([...cards].sort((a, b) => b.year - a.year));
-      default:
-        return sort;
+  // состояние для поиска
+  const [searchQuery, setSearchQuery] = useState('')
+
+  //обновляю состояние карточек
+  const updateStateCards = (sort) => {
+    console.log(sort)
+    if(sort) {
+      setSelectedSort(sort);
+    } else {
+      return sort
     }
   };
 
+  const getSortedCards = useMemo( () => {
+    console.log(selectedSort)
+    if(selectedSort === 'nameUp') {
+      return [...cards].sort((a, b) => a.name.localeCompare(b.name))
+    } else if(selectedSort === 'nameDown') {
+      return [...cards].sort((a, b) => b.name.localeCompare(a.name))
+    } else if(selectedSort === 'priceUp') {
+      return [...cards].sort((a, b) => a.price - b.price);
+    } else if(selectedSort === 'priceDown') {
+      return [...cards].sort((a, b) => b.price - a.price)
+    } else if(selectedSort === 'yearUp') {
+      return [...cards].sort((a, b) => a.year - b.year);
+    } else if(selectedSort === 'yearDown') {
+      return [...cards].sort((a, b) => b.year - a.year);
+    } else {
+      return cards
+    }
+  }, [selectedSort, cards])
+
+  const SortingWithSearch = useMemo(() => {
+    return getSortedCards.filter((item) => item.name.toLowerCase().includes(searchQuery.toLowerCase()))
+  }, [searchQuery, getSortedCards])
+
+
   return (
     <div className="App wrapper">
-      <div>
+      <div className="instrument">
         <SortSelect
           value={selectedSort}
-          onChange={sortCards}
+          onChange={updateStateCards}
           defaultValue={"Сортировка..."}
           options={[
             { value: "nameUp", name: "По названию, от A - Z" },
@@ -48,8 +65,14 @@ function App() {
             { value: "yearDown", name: "По дате выхода, по убыванию" },
           ]}
         />
+
+        <SearchField 
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
+          placeholder="Поиск..."
+         />
       </div>
-      <CardList cards={cards}></CardList>
+      <CardList cards={SortingWithSearch}></CardList>
     </div>
   );
 }
