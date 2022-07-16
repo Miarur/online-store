@@ -3,76 +3,41 @@ import "./styles/App.css";
 import CardList from "./components/CardList/CardList";
 import axios from "axios";
 import data from "./API/data.json";
-import SortSelect from "./components/UI/select/SortSelect";
-import SearchField from "./components/UI/input/SearchField";
+import SearchAndSort from "./components/SearchAndSort/SearchAndSort";
 
 function App() {
   const [cards, setCards] = useState(data.sku);
+  const [sortValue, setSearchAndSortValue] = useState({sortMethod: '', searchLine: ''})
 
-  //состояние + двухсторонне связывание для сортировки
-  const [selectedSort, setSelectedSort] = useState("");
-
-  // состояние для поиска
-  const [searchQuery, setSearchQuery] = useState('')
-
-  //обновляю состояние карточек
-  const updateStateCards = (sort) => {
-    console.log(sort)
-    if(sort) {
-      setSelectedSort(sort);
-    } else {
-      return sort
-    }
-  };
 
   const getSortedCards = useMemo( () => {
-    console.log(selectedSort)
-    if(selectedSort === 'nameUp') {
+    console.log(sortValue)
+    if(sortValue.sortMethod === 'nameUp') {
       return [...cards].sort((a, b) => a.name.localeCompare(b.name))
-    } else if(selectedSort === 'nameDown') {
+    } else if(sortValue.sortMethod === 'nameDown') {
       return [...cards].sort((a, b) => b.name.localeCompare(a.name))
-    } else if(selectedSort === 'priceUp') {
+    } else if(sortValue.sortMethod === 'priceUp') {
       return [...cards].sort((a, b) => a.price - b.price);
-    } else if(selectedSort === 'priceDown') {
+    } else if(sortValue.sortMethod === 'priceDown') {
       return [...cards].sort((a, b) => b.price - a.price)
-    } else if(selectedSort === 'yearUp') {
+    } else if(sortValue.sortMethod === 'yearUp') {
       return [...cards].sort((a, b) => a.year - b.year);
-    } else if(selectedSort === 'yearDown') {
+    } else if(sortValue.sortMethod === 'yearDown') {
       return [...cards].sort((a, b) => b.year - a.year);
     } else {
       return cards
     }
-  }, [selectedSort, cards])
+  }, [sortValue.sortMethod, cards])
 
   const SortingWithSearch = useMemo(() => {
-    return getSortedCards.filter((item) => item.name.toLowerCase().includes(searchQuery.toLowerCase()))
-  }, [searchQuery, getSortedCards])
+    return getSortedCards.filter((item) => item.name.toLowerCase().includes(sortValue.searchLine.toLowerCase()))
+  }, [sortValue.searchLine, getSortedCards])
 
 
   console.log(cards.length);
   return (
     <div className="App wrapper">
-      <div className="instrument">
-        <SortSelect
-          value={selectedSort}
-          onChange={updateStateCards}
-          defaultValue={"Сортировка..."}
-          options={[
-            { value: "nameUp", name: "По названию, от A - Z" },
-            { value: "nameDown", name: "По названию, от Z - A" },
-            { value: "priceUp", name: "По цене, сначала дешевле" },
-            { value: "priceDown", name: "По цене, сначала дороже" },
-            { value: "yearUp", name: "По дате выхода, по возрастанию" },
-            { value: "yearDown", name: "По дате выхода, по убыванию" },
-          ]}
-        />
-
-        <SearchField 
-          value={searchQuery}
-          onChange={e => setSearchQuery(e.target.value)}
-          placeholder="Поиск..."
-         />
-      </div>
+      <SearchAndSort sortValue={sortValue} setSearchAndSortValue={setSearchAndSortValue}/>
 
       {SortingWithSearch.length
         ? <CardList cards={SortingWithSearch}></CardList>
