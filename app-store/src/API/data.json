@@ -1,0 +1,126 @@
+{"sku":[
+
+  {
+    "name":"Iphone 13 128GB",
+    "img": "https://content2.onliner.by/catalog/device/header/b9fefc8c8f96dbc21492792f3a1a502d.jpeg", 
+    "quantity": "12", 
+    "year": "2021", 
+    "producer": "Apple", 
+    "color": "black-night", 
+    "quantityCamers": 3,
+    "popularity": "yes",
+    "price": 976
+  },
+
+  {
+    "name":"IPhone 11 64GB",
+    "img": "https://content2.onliner.by/catalog/device/header/e2189f90f9088975c553ec33431fc186.jpeg", 
+    "quantity": "10", 
+    "year": "2019", 
+    "producer": "Apple", 
+    "color": "black", 
+    "quantityCamers": 2,
+    "popularity": "yes",
+    "price": 649
+  },
+
+  {
+    "name":"IPhone 13 Pro 128GB",
+    "img": "https://content2.onliner.by/catalog/device/header/c66db6b4c5cce1915eadd8bb59f5c527.jpeg", 
+    "quantity": "10", 
+    "year": "2021", 
+    "producer": "Apple", 
+    "color": "graphite", 
+    "quantityCamers": 3,
+    "popularity": "yes",
+    "price": 1237
+  },
+
+  {
+    "name":"IPhone 12 128GB",
+    "img": "https://content2.onliner.by/catalog/device/header/bf14a99b6b00fa25711a3e8e7a87d23a.jpeg", 
+    "quantity": "9", 
+    "year": "2020", 
+    "producer": "Apple", 
+    "color": "black", 
+    "quantityCamers": 2,
+    "popularity": "no",
+    "price": 937
+  },
+
+  {
+    "name":"IPhone SE 64GB",
+    "img": "https://content2.onliner.by/catalog/device/header/5967975d9c930761f16487f8b690eb9a.jpeg", 
+    "quantity": "5", 
+    "year": "2020", 
+    "producer": "Apple", 
+    "color": "black", 
+    "quantityCamers": 1,
+    "popularity": "no",
+    "price": 507
+  },
+
+
+  {
+    "name":"Xiaomi Redmi Note 10S 128GB",
+    "img": "https://content2.onliner.by/catalog/device/header/7d15facb87374d6519bc391445db281c.jpeg", 
+    "quantity": "10", 
+    "year": "2021", 
+    "producer": "Xiaomi", 
+    "color": "gray onyx", 
+    "quantityCamers": 2,
+    "popularity": "yes",
+    "price": 284
+  },
+
+
+  {
+    "name":"Xiaomi 11 Lite 5G 128GB",
+    "img": "https://content2.onliner.by/catalog/device/header/7098be15f7820975d81b6b9df82f6e63.jpeg", 
+    "quantity": "10", 
+    "year": "2021", 
+    "producer": "Xiaomi", 
+    "color": "black", 
+    "quantityCamers": 3,
+    "popularity": "yes",
+    "price": 357
+  },
+
+  {
+    "name":"Xiaomi Redmi 9A 32GB",
+    "img": "https://content2.onliner.by/catalog/device/header/47f365ecf82722c2a2c62089016b38e1.jpeg", 
+    "quantity": "6", 
+    "year": "2020", 
+    "producer": "Xiaomi", 
+    "color": "gray", 
+    "quantityCamers": 2,
+    "popularity": "yes",
+    "price": 125
+  }, 
+
+  {
+    "name":"Xiaomi Mi Max 3 64GB",
+    "img": "https://content2.onliner.by/catalog/device/header/9d94da4fd422cbfb2f39628010e8a317.jpeg", 
+    "quantity": "2", 
+    "year": "2018", 
+    "producer": "Xiaomi", 
+    "color": "black", 
+    "quantityCamers": 2,
+    "popularity": "no",
+    "price": 199
+  },
+
+  {
+    "name":"Xiaomi Redmi 6A 16GB",
+    "img": "https://content2.onliner.by/catalog/device/header/6d96ea5662106e2c106514c5b3d3a7ee.jpeg", 
+    "quantity": "3", 
+    "year": "2018", 
+    "producer": "Xiaomi", 
+    "color": "white", 
+    "quantityCamers": 2,
+    "popularity": "no",
+    "price": 122
+  }
+
+]}
+
